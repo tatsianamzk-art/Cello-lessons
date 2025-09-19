@@ -1,59 +1,170 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cello Lessons — [Your Name]</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cello Lessons in Zurich – Tatsiana</title>
   <style>
-    body{font-family:Arial, sans-serif;margin:0;padding:20px;line-height:1.5;background:#fafafa}
-    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
-    nav a{margin-left:10px;text-decoration:none;color:#0077cc;font-weight:bold;cursor:pointer}
-    .hero{background:#eef6ff;padding:20px;border-radius:10px;margin-bottom:20px}
-    h1{margin:0 0 10px 0}
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #6d4c41, #3e2723);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2em;
+      margin: 15px 0 25px;
+    }
+    header a {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #fbc02d;
+      color: #3e2723;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    header a:hover {
+      background: #ffeb3b;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #3e2723;
+    }
+    .lang { display: none; }
+    #en { display: block; }
+    .lang-buttons {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .lang-buttons button {
+      padding: 8px 16px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      background: #3e2723;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .lang-buttons button:hover {
+      background: #5d4037;
+    }
+    #contact {
+      background: linear-gradient(135deg, #f9f6f1, #f0ebe3);
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 30px;
+    }
+    #contact a {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #3e2723;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    #contact a:hover {
+      background: #5d4037;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      padding: 20px;
+      margin-top: 30px;
+      border-top: 1px solid #ddd;
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <div><strong>[Your Name]</strong> — Cello Teacher</div>
-    <nav>
-      <a onclick="setLang('en')">EN</a> | 
-      <a onclick="setLang('de')">DE</a> | 
-      <a onclick="setLang('ru')">RU</a>
-    </nav>
+    <h1>Tatsiana – Cello Lessons in Zurich</h1>
+    <p>Discover the joy of music – from Baroque and Classical to Pop and Rock 🎶</p>
+    <a href="#contact">Book a trial lesson</a>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1 data-en="Cello Lessons in Zurich"
-          data-de="Cellounterricht in Zürich"
-          data-ru="Уроки виолончели в Цюрихе"></h1>
-      <p data-en="Private and online lessons for children and adults."
-         data-de="Privater und Online-Unterricht für Kinder und Erwachsene."
-         data-ru="Индивидуальные и онлайн-уроки для детей и взрослых."></p>
-    </section>
+  <section id="about">
+    <h2>🎻 About Me</h2>
+    <div class="lang-buttons">
+      <button onclick="showLang('en')">English</button>
+      <button onclick="showLang('de')">Deutsch</button>
+      <button onclick="showLang('ru')">Русский</button>
+    </div>
 
-    <section>
-      <h2 data-en="About Me" data-de="Über mich" data-ru="Обо мне"></h2>
-      <p data-en="Hello, I am [Your Name], a professional cello teacher in Zurich."
-         data-de="Hallo, ich bin [Ihr Name], professionelle Cellolehrerin in Zürich."
-         data-ru="Здравствуйте, я [Ваше имя], преподаватель виолончели в Цюрихе."></p>
-    </section>
+    <div id="en" class="lang">
+      <p>I hold a <strong>Master of Arts in Performance</strong> and a <strong>Master of Arts in Music Pedagogy</strong> from the Zurich University of the Arts (ZHdK).</p>
+      <p>With over ten years of teaching experience, I enjoy working with students of all ages – from children taking their very first steps in music to adults fulfilling a long-held dream of playing the cello.</p>
+      <p>My lessons are built on <strong>joy, motivation, and creativity</strong>. I want my students not only to learn but also to truly <strong>enjoy making music</strong>. Together, we explore a wide variety of styles – from <strong>Baroque and Classical</strong> to <strong>Pop and Rock</strong> – always combining solid technique with personal expression.</p>
+      <p>As an active <strong>chamber musician and orchestral player</strong>, I bring my stage experience into teaching, helping students connect learning with the real joy of performing.</p>
+    </div>
 
-    <section>
-      <h2 data-en="Contact" data-de="Kontakt" data-ru="Контакты"></h2>
-      <p data-en="Email: your@email.com"
-         data-de="E-Mail: your@email.com"
-         data-ru="Эл. почта: your@email.com"></p>
-    </section>
-  </main>
+    <div id="de" class="lang">
+      <p>Ich habe sowohl den <strong>Master of Arts in Performance</strong> als auch den <strong>Master of Arts in Musikpädagogik</strong> an der Zürcher Hochschule der Künste (ZHdK) erworben.</p>
+      <p>Seit über zehn Jahren unterrichte ich Schüler*innen jeden Alters – von Kindern, die ihre ersten Schritte in der Musik machen, bis hin zu Erwachsenen, die sich einen lang gehegten Traum erfüllen wollen.</p>
+      <p>Mein Unterricht basiert auf <strong>Freude, Motivation und Kreativität</strong>. Mir ist wichtig, dass meine Schüler*innen nicht nur lernen, sondern auch <strong>Freude am Musizieren</strong> haben. Gemeinsam erkunden wir verschiedene Stile – von <strong>Barock und Klassik</strong> bis hin zu <strong>Pop und Rock</strong> – und verbinden solide Technik mit persönlichem Ausdruck.</p>
+      <p>Als aktive <strong>Kammermusikerin und Orchestermusikerin</strong> lasse ich meine Bühnenerfahrung in den Unterricht einfließen und helfe meinen Schüler*innen, das Lernen mit echter Spielfreude zu verbinden.</p>
+    </div>
+
+    <div id="ru" class="lang">
+      <p>Я получила два диплома магистра в Цюрихской Высшей школе искусств (ZHdK): <strong>Master of Arts in Performance</strong> и <strong>Master of Arts in Music Pedagogy</strong>.</p>
+      <p>Уже более десяти лет я преподаю виолончель детям и взрослым любого возраста – от начинающих до тех, кто давно мечтал научиться играть.</p>
+      <p>Мои уроки строятся на <strong>радости, мотивации и творчестве</strong>. Мне важно, чтобы ученики не только учились, но и <strong>получали удовольствие от музыки</strong>. Мы занимаемся разными стилями – от <strong>барокко и классики</strong> до <strong>попа и рока</strong>, сочетая технику с личным выражением.</p>
+      <p>Как <strong>камерная и оркестровая музыкантка</strong>, я делюсь своим сценическим опытом, чтобы помочь ученикам почувствовать радость настоящего музицирования.</p>
+    </div>
+  </section>
+
+  <section id="lessons">
+    <h2>🎶 Lessons</h2>
+    <p style="text-align:center; max-width:700px; margin:0 auto;">
+      I offer individual cello lessons in Zurich for <strong>children, teenagers, and adults</strong>, beginners and advanced.  
+      Lessons are tailored to each student’s goals – whether learning classical repertoire, exploring baroque styles, or playing modern pop and rock songs.  
+      The focus is always on <strong>enjoyment, progress, and personal expression</strong>.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>📩 Contact</h2>
+    <p style="font-size:1.1em;">Interested in cello lessons?</p>
+    <p>I teach in my private studio near <strong>Bahnhofstrasse, Zurich</strong>.<br>
+       Lessons available in English, Deutsch, and Русский.</p>
+    <a href="mailto:tatsianamzk@gmail.com">Write me</a>
+    <p style="margin-top:20px; font-size:0.9em; color:#555;">✉️ tatsianamzk@gmail.com</p>
+  </section>
+
+  <footer>
+    © 2025 Tatsiana – Cello Lessons in Zurich 🎻
+  </footer>
 
   <script>
-    function setLang(lang){
-      document.querySelectorAll("[data-en]").forEach(el=>{
-        el.textContent = el.getAttribute("data-"+lang);
-      });
+    function showLang(lang) {
+      document.querySelectorAll('.lang').forEach(div => div.style.display = 'none');
+      document.getElementById(lang).style.display = 'block';
     }
-    setLang("en"); // default = English
   </script>
 </body>
 </html>
