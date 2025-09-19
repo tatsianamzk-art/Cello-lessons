@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cello Lessons — [Your Name]</title>
+  <style>
+    body{font-family:Arial, sans-serif;margin:0;padding:20px;line-height:1.5;background:#fafafa}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+    nav a{margin-left:10px;text-decoration:none;color:#0077cc;font-weight:bold;cursor:pointer}
+    .hero{background:#eef6ff;padding:20px;border-radius:10px;margin-bottom:20px}
+    h1{margin:0 0 10px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>[Your Name]</strong> — Cello Teacher</div>
+    <nav>
+      <a onclick="setLang('en')">EN</a> | 
+      <a onclick="setLang('de')">DE</a> | 
+      <a onclick="setLang('ru')">RU</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 data-en="Cello Lessons in Zurich"
+          data-de="Cellounterricht in Zürich"
+          data-ru="Уроки виолончели в Цюрихе"></h1>
+      <p data-en="Private and online lessons for children and adults."
+         data-de="Privater und Online-Unterricht für Kinder und Erwachsene."
+         data-ru="Индивидуальные и онлайн-уроки для детей и взрослых."></p>
+    </section>
+
+    <section>
+      <h2 data-en="About Me" data-de="Über mich" data-ru="Обо мне"></h2>
+      <p data-en="Hello, I am [Your Name], a professional cello teacher in Zurich."
+         data-de="Hallo, ich bin [Ihr Name], professionelle Cellolehrerin in Zürich."
+         data-ru="Здравствуйте, я [Ваше имя], преподаватель виолончели в Цюрихе."></p>
+    </section>
+
+    <section>
+      <h2 data-en="Contact" data-de="Kontakt" data-ru="Контакты"></h2>
+      <p data-en="Email: your@email.com"
+         data-de="E-Mail: your@email.com"
+         data-ru="Эл. почта: your@email.com"></p>
+    </section>
+  </main>
+
+  <script>
+    function setLang(lang){
+      document.querySelectorAll("[data-en]").forEach(el=>{
+        el.textContent = el.getAttribute("data-"+lang);
+      });
+    }
+    setLang("en"); // default = English
+  </script>
+</body>
+</html>
